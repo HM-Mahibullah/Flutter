@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "8c0a2632-0d0d-40f3-8321-d52ce6ebdacd",
+		"name": "CRUD Rabbil Hasan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40428209"
+	},
+	"item": [
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ProductName\": \"\",\r\n        \"ProductCode\":\"\",\r\n        \"Img\": \"\",\r\n        \"Qty\": \"\",\r\n        \"UnitPrice\":\"\",\r\n        \"TotalPrice\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/CreateProduct",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"CreateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/ReadProduct",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"ReadProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"ProductName\": \"rew\",\r\n        \"ProductCode\": 23345243,\r\n        \"Img\": \"acbc\",\r\n        \"Qty\": 123,\r\n        \"UnitPrice\": 123,\r\n        \"TotalPrice\": 123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/UpdateProduct/65abe919f68794d36c5b7ffa",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"UpdateProduct",
+						"65abe919f68794d36c5b7ffa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/DeleteProduct/65abe8b31e27100ba914f2e5",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"DeleteProduct",
+						"65abe8b31e27100ba914f2e5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "https://crud.teamrabbil.com/api/v1",
+			"type": "string"
+		}
+	]
+}
