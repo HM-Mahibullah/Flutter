@@ -18,6 +18,10 @@ icon: arrow-up-a-z
 
 <figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
+## <mark style="color:green;">**Nevigator**</mark>
+
+In Flutter, a **Navigator** is a widget that manages a stack of widgets, enabling navigation between different screens or routes in a Flutter app. It provides functionality to push new routes onto the stack (navigate to a new screen) and pop routes off the stack (go back to the previous screen).
+
 ## <mark style="color:green;">**stateless widget**</mark>
 
 &#x20;is a widget that does not maintain any state of its own. It is immutable, meaning that its properties cannot change after it has been created. Stateless widgets are used when the user interface is static and does not need to update or redraw based on changes over time.
