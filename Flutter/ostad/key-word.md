@@ -4,6 +4,16 @@ icon: arrow-up-a-z
 
 # Key word
 
+## <mark style="color:green;">**build context:**</mark>
+
+**BuildContext** is a handle or reference to the location of a widget within the widget tree. It is a crucial part of how Flutter widgets interact with the widget tree to build and rebuild the UI.
+
+
+
+## <mark style="color:green;">**context**</mark>
+
+**context** refers to a handle that provides access to the location of a widget in the widget tree and enables interaction with its surrounding environment. It is represented by the `BuildContext` class.
+
 <figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>B<mark style="color:green;">u<strong>tt</strong></mark><strong>on</strong></p></figcaption></figure>
@@ -22,7 +32,13 @@ icon: arrow-up-a-z
 
 In Flutter, a **Navigator** is a widget that manages a stack of widgets, enabling navigation between different screens or routes in a Flutter app. It provides functionality to push new routes onto the stack (navigate to a new screen) and pop routes off the stack (go back to the previous screen).
 
+## <mark style="color:green;">**State**</mark>
+
+**state** refers to the information that can change in an app and needs to be reflected dynamically in the UI. Managing state effectively is crucial for building interactive applications
+
 ## <mark style="color:green;">**stateless widget**</mark>
+
+
 
 &#x20;is a widget that does not maintain any state of its own. It is immutable, meaning that its properties cannot change after it has been created. Stateless widgets are used when the user interface is static and does not need to update or redraw based on changes over time.
 
