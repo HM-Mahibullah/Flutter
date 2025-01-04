@@ -106,3 +106,4 @@
   * [Page 5](postman-in-javatpoint/page-5.md)
 * [Web site host](web-site-host.md)
 * [Command](command.md)
+* [Video](video.md)
