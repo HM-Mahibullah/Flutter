@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "078ae70a-c9d3-49e3-bc61-47ade461d681",
+		"name": "TaskManager Rabbil Hasan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40428209"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>Email</th>\r",
+							"        <th>First Name</th>\r",
+							"        <th>Last Name</th>\r",
+							"        <th>Mobile</th>\r",
+							"        <th>Password</th>\r",
+							"        <th>Photo</th>\r",
+							"        <th>Created Date</th>\r",
+							"        <th>ID</th>\r",
+							"    </tr>\r",
+							"    <tr>\r",
+							"        <td>{{response.data.email}}</td>\r",
+							"        <td>{{response.data.firstName}}</td>\r",
+							"        <td>{{response.data.lastName}}</td>\r",
+							"        <td>{{response.data.mobile}}</td>\r",
+							"        <td>{{response.data.password}}</td>\r",
+							"        <td>{{response.data.photo}}</td>\r",
+							"        <td>{{response.data.createdDate}}</td>\r",
+							"        <td>{{response.data._id}}</td>\r",
+							"    </tr>\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    return { response: pm.response.json() }\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"rggi999@ga\",\r\n  \"firstName\": \"Rhggha\",\r\n  \"lastName\": \"Hagghn\",\r\n  \"mobile\": \"0178444gg43919\",\r\n  \"password\": \"4g414\",\r\n  \"photo\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/registration",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>Status</th>\r",
+							"    </tr>\r",
+							"    <tr>\r",
+							"        <td>{{response.status}}</td>\r",
+							"    </tr>\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    return {response: pm.response.json()}\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"rggi999@ga\",\r\n  \"password\": \"4g414\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/login",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profileUpdate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"mobile\": \"01784g438919\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/profileUpdate",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"profileUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My Task\",\r\n  \"description\": \"My Task\",\r\n  \"status\": \"New\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/createTask",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"createTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTaskStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/updateTaskStatus/Progress",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"updateTaskStatus",
+						"Progress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listTaskByStatus",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/listTaskByStatus/New",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"listTaskByStatus",
+						"New"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "taskStatusCount",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/taskStatusCount",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"taskStatusCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecoverVerifyEmail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/RecoverVerifyEmail",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"RecoverVerifyEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecoverVefityOTP",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/RecoverVefityOTP",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"RecoverVefityOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecoverResetPass",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"\",\r\n  \"OTP\": \"\",\r\n  \"password\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/RecoverResetPass",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"RecoverResetPass"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "https://task.teamrabbil.com/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzcwMzMzMTAsImRhdGEiOiJyZ2dpOTk5QGdhIiwiaWF0IjoxNzM2OTQ2OTEwfQ.0LpZZ42e-ZiXwNMnA5qP4d6ptjouR5IUzeVJ_5m-PfI",
+			"type": "string"
+		}
+	]
+}
