@@ -110,3 +110,5 @@
 * [Web site host](web-site-host.md)
 * [Command](command.md)
 * [Video](video.md)
+* [Shortcut](shortcut.md)
+* [Naming Convention for dart](naming-convention-for-dart.md)
